@@ -1,0 +1,6 @@
+<template name="NewGoal">
+    <div class="new-recipe-container">
+        <i class="fa fa-close"></i>
+        {{> quickForm collection="Goals" id="insertRecipeForm" type="insert" class="new-recipe-form"  omitFields="author,createdAt,isGoal, allDay"}}
+    </div>
+</template>

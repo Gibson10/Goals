@@ -1,0 +1,33 @@
+<template name="Goal">
+    
+    <article class="recipe {{#if isGoal}}in-menu{{/if}}">
+        <h3>{{keyresult}}</h3>
+        <!-- {{#if $.Session.get 'editMode' }} -->
+
+        {{#if editMode }}
+        {{>quickForm collection="Goals" id=updateRecipeId type="update" doc=this omitFields="author, isGoal, allDay, createdAt " autosave=true}}
+        {{else}}
+
+        <p>{{status}}</p>
+        <span class="ingredient">
+        <p>{{Objective}}
+            <!-- <span class="ingredient">{{keyresult}}-{{milestone}}</span> -->
+            <!-- {{/each}} -->
+        </p>
+        </span>
+             <a href="/goal/{{_id}}">View Details</a>
+
+                {{#if isGoal}}
+                <button class="btn-deny toggle-menu">Remove Week Objectives</button>
+                {{else}}
+                <button class="btn-primary toggle-menu">Add To Week Objectives</button>
+                {{/if}}
+        {{/if}}
+      
+        <i class="fa fa-pencil"></i>
+        <i class="fa fa-trash"></i>
+       
+       
+        
+    </article>
+</template>

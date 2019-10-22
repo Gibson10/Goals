@@ -1,0 +1,40 @@
+<template name="HomeLayout">
+        {{>Header}}  
+<main>
+    <div class="billboard">
+        <h2>Organize your Goals</h2>
+    </div>
+</main>
+
+<main class="main-layout"> 
+        {{> Register}}
+       
+    </main>
+
+</template>
+
+
+
+<template name="Register">
+
+   <div class="container-fluid"
+     > <div class="row">
+    <form class="register">
+      <div class="row">
+        <div class="input-field col s6">
+                <label for="icon_prefix">Email</label>
+          <input id="email" type="text" name="email" class="validate">
+         
+        </div>
+        <div class="input-field col s6">
+                <label for="icon_telephone">Password</label>
+          <input id="password" type="password" name="password" class="validate">
+          
+        </div>
+       <input type="submit" value="Register"> 
+      </div>
+      
+    </form>
+  </div>
+</div> 
+</template>

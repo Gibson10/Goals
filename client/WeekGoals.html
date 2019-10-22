@@ -1,0 +1,19 @@
+<template name="WeekGoals">
+    <h1 class="page-title"> My Current Objectives</h1>
+   
+    {{#each goals}}
+     {{>MenuItem}}
+     {{else}}
+    <h3> Please add <a href="/goal-book">Objectives</a>  to your Week Objectives </h3>
+    {{/each}}
+
+</template>
+
+<template name="MenuItem">
+    <div class="menu-item">
+            <h3>{{Objective}}</h3>
+            <p>
+            
+            </p>
+    </div>
+</template>

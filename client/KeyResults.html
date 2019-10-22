@@ -1,0 +1,17 @@
+<template name="KeyResults">
+  <h1 class="page-title">MY KEY RESULTS</h1>  
+
+  <ul class="shopping-list">
+      {{#each goals}}
+         {{#each KeyResults}}
+        
+         <a href="/milestone/{{_id}}"><li class="NewKey">{{keyresult}} <span class="amount"></span></li></a>
+  
+        
+         {{/each}}
+      {{else}}
+      <h3> Please add <a href="/goal-book">Goals</a>  to your weeks Objectives </h3>
+    
+      {{/each}}
+  </ul>
+</template>
